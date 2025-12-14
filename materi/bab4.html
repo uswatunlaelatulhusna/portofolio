@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bab 4 – Virtualisasi Cloud Computing</title>
+
+  <style>
+    :root{
+      --soft-blue:#EAF6FF;
+      --primary:#0E4C92;
+      --text:#2c2c2c;
+      --muted:#6b7280;
+      --card:#ffffff;
+      --radius:14px;
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:linear-gradient(180deg,var(--soft-blue),#fff);
+      color:var(--text);
+      line-height:1.7;
+    }
+
+    .header{
+      max-width:900px;
+      margin:0 auto;
+      padding:32px 20px 10px;
+    }
+
+    .breadcrumb{
+      font-size:14px;
+      color:var(--muted);
+    }
+
+    .breadcrumb a{
+      color:var(--primary);
+      text-decoration:none;
+    }
+
+    h1{
+      margin:10px 0 6px;
+      color:var(--primary);
+      font-size:28px;
+    }
+
+    .subtitle{
+      color:var(--muted);
+      font-size:16px;
+    }
+
+    .container{
+      max-width:900px;
+      margin:20px auto 60px;
+      padding:0 20px;
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:22px;
+      box-shadow:0 12px 30px rgba(14,76,146,0.08);
+      margin-bottom:18px;
+    }
+
+    h2{
+      font-size:20px;
+      margin-top:0;
+      color:var(--primary);
+    }
+
+    h3{
+      margin-bottom:6px;
+    }
+
+    ul{
+      padding-left:18px;
+    }
+
+    li{
+      margin-bottom:6px;
+    }
+
+    .highlight{
+      background:rgba(14,76,146,0.06);
+      border-left:4px solid var(--primary);
+      padding:14px;
+      border-radius:10px;
+      font-size:15px;
+      margin-top:10px;
+    }
+
+    .nav-actions{
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      margin-top:24px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:10px 16px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:600;
+      font-size:14px;
+      transition:0.2s ease;
+    }
+
+    .btn-back{
+      background:#fff;
+      color:var(--primary);
+      border:2px solid rgba(14,76,146,0.2);
+    }
+
+    .btn-next{
+      background:var(--primary);
+      color:#fff;
+    }
+
+    .btn:hover{
+      transform:translateY(-2px);
+      box-shadow:0 8px 20px rgba(14,76,146,0.15);
+    }
+
+    footer{
+      text-align:center;
+      font-size:13px;
+      color:var(--muted);
+      padding:30px 20px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="breadcrumb">
+    <a href="../index.html">Beranda</a> / Materi / Bab 4
+  </div>
+  <h1>Bab 4: Virtualisasi dan Container</h1>
+  <p class="subtitle">
+    Fondasi utama teknologi cloud computing modern.
+  </p>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+
+  <div class="card">
+    <h2>1. Pengertian Virtualisasi</h2>
+    <p>
+      Virtualisasi adalah teknologi yang memungkinkan satu perangkat keras fisik
+      menjalankan beberapa sistem operasi dan aplikasi secara bersamaan
+      menggunakan mesin virtual (Virtual Machine).
+    </p>
+
+    <div class="highlight">
+      Dengan virtualisasi, sumber daya seperti CPU, RAM, dan storage
+      dapat digunakan secara lebih efisien.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>2. Cara Kerja Virtualisasi</h2>
+    <p>
+      Virtualisasi bekerja dengan bantuan perangkat lunak yang disebut
+      <strong>Hypervisor</strong>. Hypervisor bertugas membagi dan mengelola
+      sumber daya perangkat keras untuk setiap mesin virtual.
+    </p>
+
+    <h3>Alur Kerja:</h3>
+    <ul>
+      <li>Server fisik menyediakan sumber daya</li>
+      <li>Hypervisor mengelola hardware</li>
+      <li>Mesin virtual berjalan di atas hypervisor</li>
+      <li>Setiap VM memiliki OS dan aplikasi sendiri</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>3. Jenis Hypervisor</h2>
+
+    <h3>a. Hypervisor Tipe 1 (Bare Metal)</h3>
+    <p>
+      Hypervisor yang berjalan langsung di atas hardware tanpa sistem operasi
+      tambahan.
+    </p>
+    <ul>
+      <li>Performa tinggi</li>
+      <li>Stabil dan aman</li>
+    </ul>
+
+    <div class="highlight">
+      Contoh: VMware ESXi, Microsoft Hyper-V, Xen
+    </div>
+
+    <h3>b. Hypervisor Tipe 2 (Hosted)</h3>
+    <p>
+      Hypervisor yang berjalan di atas sistem operasi host.
+    </p>
+    <ul>
+      <li>Mudah digunakan</li>
+      <li>Cocok untuk pembelajaran</li>
+    </ul>
+
+    <div class="highlight">
+      Contoh: VirtualBox, VMware Workstation
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>4. Virtual Machine (VM)</h2>
+    <p>
+      Virtual Machine adalah komputer virtual yang berjalan di dalam
+      komputer fisik dan memiliki sistem operasi serta aplikasi sendiri.
+    </p>
+
+    <h3>Kelebihan VM:</h3>
+    <ul>
+      <li>Isolasi sistem tinggi</li>
+      <li>Mendukung berbagai OS</li>
+      <li>Cocok untuk aplikasi besar</li>
+    </ul>
+
+    <h3>Kekurangan VM:</h3>
+    <ul>
+      <li>Menggunakan resource besar</li>
+      <li>Waktu boot lebih lama</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>5. Container</h2>
+    <p>
+      Container adalah teknologi virtualisasi tingkat aplikasi yang
+      memungkinkan aplikasi berjalan secara terisolasi tanpa perlu
+      sistem operasi terpisah.
+    </p>
+
+    <div class="highlight">
+      Container lebih ringan dan cepat dibandingkan Virtual Machine.
+    </div>
+
+    <h3>Karakteristik Container:</h3>
+    <ul>
+      <li>Ringan dan cepat</li>
+      <li>Menggunakan OS host</li>
+      <li>Mudah dipindahkan</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>6. Docker dan Kubernetes</h2>
+
+    <h3>Docker</h3>
+    <p>
+      Docker adalah platform untuk membuat, menjalankan, dan mengelola container.
+    </p>
+
+    <h3>Kubernetes</h3>
+    <p>
+      Kubernetes digunakan untuk mengatur dan mengelola banyak container
+      dalam skala besar.
+    </p>
+
+    <div class="highlight">
+      Docker + Kubernetes adalah kombinasi utama dalam cloud modern.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>7. Perbandingan Virtual Machine dan Container</h2>
+    <ul>
+      <li><strong>VM:</strong> Lebih aman, resource besar</li>
+      <li><strong>Container:</strong> Ringan, cepat, efisien</li>
+    </ul>
+
+    <div class="highlight">
+      Pemilihan VM atau container tergantung kebutuhan aplikasi dan skala sistem.
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <div class="nav-actions">
+    <a href="bab3.html" class="btn btn-back">← Bab 3</a>
+    <a href="bab5.html" class="btn btn-next">Bab 5 →</a>
+  </div>
+
+</div>
+
+<footer>
+  © <span id="year"></span> Materi Cloud Computing
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
