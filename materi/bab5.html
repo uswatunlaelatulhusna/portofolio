@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bab 5 – Arsitektur Cloud Computing</title>
+
+<style>
+:root{
+  --soft-blue:#EAF6FF;
+  --primary:#0E4C92;
+  --text:#2c2c2c;
+  --muted:#6b7280;
+  --card:#ffffff;
+  --radius:14px;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  background:linear-gradient(180deg,var(--soft-blue),#fff);
+  color:var(--text);
+  line-height:1.7;
+}
+
+.header{
+  max-width:900px;
+  margin:auto;
+  padding:32px 20px 10px;
+}
+
+.breadcrumb{
+  font-size:14px;
+  color:var(--muted);
+}
+
+.breadcrumb a{
+  color:var(--primary);
+  text-decoration:none;
+}
+
+h1{
+  color:var(--primary);
+  margin:10px 0 6px;
+}
+
+.subtitle{
+  color:var(--muted);
+}
+
+.container{
+  max-width:900px;
+  margin:20px auto 60px;
+  padding:0 20px;
+}
+
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:22px;
+  box-shadow:0 12px 30px rgba(14,76,146,0.08);
+  margin-bottom:18px;
+}
+
+h2{
+  color:var(--primary);
+  margin-top:0;
+}
+
+ul{
+  padding-left:18px;
+}
+
+li{
+  margin-bottom:6px;
+}
+
+.highlight{
+  background:rgba(14,76,146,0.06);
+  border-left:4px solid var(--primary);
+  padding:14px;
+  border-radius:10px;
+  margin-top:10px;
+}
+
+/* ===== DIAGRAM ===== */
+.diagram{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  margin-top:16px;
+}
+
+.diagram-row{
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  flex-wrap:wrap;
+}
+
+.diagram-box{
+  padding:14px 18px;
+  background:#fff;
+  border-radius:12px;
+  border:2px dashed rgba(14,76,146,0.3);
+  min-width:160px;
+  text-align:center;
+  font-weight:600;
+}
+
+.diagram-box.primary{
+  background:rgba(14,76,146,0.08);
+  border-style:solid;
+}
+
+.diagram-box.small{
+  font-size:14px;
+}
+
+.arrow{
+  text-align:center;
+  font-size:20px;
+  color:var(--primary);
+}
+
+/* NAV */
+.nav-actions{
+  display:flex;
+  justify-content:space-between;
+  margin-top:24px;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.btn{
+  padding:10px 16px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.btn-back{
+  border:2px solid rgba(14,76,146,0.3);
+  color:var(--primary);
+}
+
+.btn-next{
+  background:var(--primary);
+  color:#fff;
+}
+
+footer{
+  text-align:center;
+  font-size:13px;
+  color:var(--muted);
+  padding:30px 20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <div class="breadcrumb">
+    <a href="../index.html">Beranda</a> / Materi / Bab 5
+  </div>
+  <h1>Bab 5: Arsitektur Cloud Computing</h1>
+  <p class="subtitle">
+    Struktur, komponen, dan alur kerja sistem cloud computing
+  </p>
+</div>
+
+<div class="container">
+
+  <div class="card">
+    <h2>1. Pengertian Arsitektur Cloud</h2>
+    <p>
+      Arsitektur cloud computing adalah desain struktur sistem cloud yang
+      menunjukkan bagaimana komponen cloud saling terhubung dan bekerja
+      untuk menyediakan layanan kepada pengguna.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>2. Komponen Utama Arsitektur Cloud</h2>
+    <ul>
+      <li>Front-End Cloud</li>
+      <li>Back-End Cloud</li>
+      <li>Cloud Server</li>
+      <li>Cloud Storage</li>
+      <li>Cloud Network</li>
+      <li>Manajemen & Monitoring</li>
+    </ul>
+  </div>
+
+  <!-- ===== DIAGRAM VISUAL ===== -->
+  <div class="card">
+    <h2>3. Diagram Arsitektur Cloud Computing</h2>
+    <p>
+      Diagram berikut menunjukkan alur kerja dan hubungan antar komponen
+      dalam arsitektur cloud computing.
+    </p>
+
+    <div class="diagram">
+
+      <div class="diagram-row">
+        <div class="diagram-box primary">User</div>
+      </div>
+
+      <div class="arrow">↓</div>
+
+      <div class="diagram-row">
+        <div class="diagram-box">Front-End<br><span class="small">(Browser / App)</span></div>
+      </div>
+
+      <div class="arrow">↓</div>
+
+      <div class="diagram-row">
+        <div class="diagram-box primary">Internet / Cloud Network</div>
+      </div>
+
+      <div class="arrow">↓</div>
+
+      <div class="diagram-row">
+        <div class="diagram-box">Cloud Server</div>
+        <div class="diagram-box">Cloud Storage</div>
+        <div class="diagram-box">Database</div>
+      </div>
+
+      <div class="arrow">↓</div>
+
+      <div class="diagram-row">
+        <div class="diagram-box small">Virtualisasi / Container</div>
+        <div class="diagram-box small">Manajemen & Monitoring</div>
+      </div>
+
+    </div>
+
+    <div class="highlight">
+      Diagram ini menunjukkan bahwa pengguna tidak berinteraksi langsung
+      dengan server, melainkan melalui front-end dan jaringan cloud.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>4. Alur Kerja Arsitektur Cloud</h2>
+    <ul>
+      <li>Pengguna mengakses aplikasi melalui browser</li>
+      <li>Permintaan dikirim lewat internet</li>
+      <li>Cloud server memproses permintaan</li>
+      <li>Data diambil atau disimpan ke cloud storage</li>
+      <li>Hasil dikirim kembali ke pengguna</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>5. Manfaat Arsitektur Cloud</h2>
+    <ul>
+      <li>Skalabilitas tinggi</li>
+      <li>Efisiensi biaya</li>
+      <li>Keamanan terpusat</li>
+      <li>Kemudahan pengelolaan</li>
+    </ul>
+  </div>
+
+  <div class="nav-actions">
+    <a href="bab4.html" class="btn btn-back">← Bab 4</a>
+    <a href="bab6.html" class="btn btn-next">Bab 6 →</a>
+  </div>
+
+</div>
+
+<footer>
+© <span id="year"></span> Materi Cloud Computing
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
