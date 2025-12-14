@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bab 3 – Model Deployment Cloud Computing</title>
+
+  <style>
+    :root{
+      --soft-blue:#EAF6FF;
+      --primary:#0E4C92;
+      --text:#2c2c2c;
+      --muted:#6b7280;
+      --card:#ffffff;
+      --radius:14px;
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:linear-gradient(180deg,var(--soft-blue),#fff);
+      color:var(--text);
+      line-height:1.7;
+    }
+
+    .header{
+      max-width:900px;
+      margin:0 auto;
+      padding:32px 20px 10px;
+    }
+
+    .breadcrumb{
+      font-size:14px;
+      color:var(--muted);
+    }
+
+    .breadcrumb a{
+      color:var(--primary);
+      text-decoration:none;
+    }
+
+    h1{
+      margin:10px 0 6px;
+      color:var(--primary);
+      font-size:28px;
+    }
+
+    .subtitle{
+      color:var(--muted);
+      font-size:16px;
+    }
+
+    .container{
+      max-width:900px;
+      margin:20px auto 60px;
+      padding:0 20px;
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:22px;
+      box-shadow:0 12px 30px rgba(14,76,146,0.08);
+      margin-bottom:18px;
+    }
+
+    h2{
+      font-size:20px;
+      margin-top:0;
+      color:var(--primary);
+    }
+
+    h3{
+      margin-bottom:6px;
+    }
+
+    ul{
+      padding-left:18px;
+    }
+
+    li{
+      margin-bottom:6px;
+    }
+
+    .highlight{
+      background:rgba(14,76,146,0.06);
+      border-left:4px solid var(--primary);
+      padding:14px;
+      border-radius:10px;
+      font-size:15px;
+      margin-top:10px;
+    }
+
+    .nav-actions{
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      margin-top:24px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:10px 16px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:600;
+      font-size:14px;
+      transition:0.2s ease;
+    }
+
+    .btn-back{
+      background:#fff;
+      color:var(--primary);
+      border:2px solid rgba(14,76,146,0.2);
+    }
+
+    .btn-next{
+      background:var(--primary);
+      color:#fff;
+    }
+
+    .btn:hover{
+      transform:translateY(-2px);
+      box-shadow:0 8px 20px rgba(14,76,146,0.15);
+    }
+
+    footer{
+      text-align:center;
+      font-size:13px;
+      color:var(--muted);
+      padding:30px 20px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="breadcrumb">
+    <a href="../index.html">Beranda</a> / Materi / Bab 3
+  </div>
+  <h1>Bab 3: Model Deployment Cloud Computing</h1>
+  <p class="subtitle">
+    Mengenal cara penerapan cloud computing berdasarkan kepemilikan dan akses pengguna.
+  </p>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+
+  <div class="card">
+    <h2>1. Pengertian Model Deployment Cloud</h2>
+    <p>
+      Model deployment cloud computing menjelaskan bagaimana infrastruktur cloud
+      diterapkan dan siapa saja yang dapat mengaksesnya. Pemilihan model deployment
+      sangat berpengaruh terhadap keamanan, biaya, dan fleksibilitas sistem.
+    </p>
+
+    <div class="highlight">
+      Model deployment menentukan <strong>siapa pemilik cloud</strong> dan
+      <strong>siapa yang boleh menggunakannya</strong>.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>2. Public Cloud</h2>
+    <p>
+      Public Cloud adalah model deployment cloud di mana layanan cloud
+      disediakan oleh pihak ketiga dan digunakan oleh banyak pengguna
+      (multi-tenant). Infrastruktur sepenuhnya dimiliki dan dikelola oleh
+      penyedia layanan cloud.
+    </p>
+
+    <h3>Karakteristik Public Cloud:</h3>
+    <ul>
+      <li>Dapat diakses oleh umum melalui internet</li>
+      <li>Biaya relatif lebih murah</li>
+      <li>Skalabilitas sangat tinggi</li>
+    </ul>
+
+    <h3>Contoh Penggunaan:</h3>
+    <ul>
+      <li>Website publik</li>
+      <li>Aplikasi startup</li>
+      <li>Media penyimpanan online</li>
+    </ul>
+
+    <div class="highlight">
+      Contoh Public Cloud: Amazon Web Services (AWS), Google Cloud Platform, Microsoft Azure
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>3. Private Cloud</h2>
+    <p>
+      Private Cloud adalah model cloud yang digunakan secara khusus
+      oleh satu organisasi. Infrastruktur dapat berada di dalam data center
+      organisasi atau dikelola oleh pihak ketiga.
+    </p>
+
+    <h3>Karakteristik Private Cloud:</h3>
+    <ul>
+      <li>Akses terbatas hanya untuk organisasi tertentu</li>
+      <li>Tingkat keamanan lebih tinggi</li>
+      <li>Kontrol penuh terhadap data</li>
+    </ul>
+
+    <h3>Contoh Penggunaan:</h3>
+    <ul>
+      <li>Sistem keuangan perusahaan</li>
+      <li>Data pemerintahan</li>
+      <li>Aplikasi internal perusahaan</li>
+    </ul>
+
+    <div class="highlight">
+      Private Cloud cocok untuk organisasi dengan kebutuhan keamanan tinggi
+      dan regulasi ketat.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>4. Community Cloud</h2>
+    <p>
+      Community Cloud adalah cloud yang digunakan oleh beberapa organisasi
+      yang memiliki kepentingan dan kebutuhan yang sama, seperti regulasi,
+      keamanan, atau tujuan bisnis tertentu.
+    </p>
+
+    <h3>Karakteristik Community Cloud:</h3>
+    <ul>
+      <li>Digunakan oleh komunitas tertentu</li>
+      <li>Biaya ditanggung bersama</li>
+      <li>Keamanan disesuaikan kebutuhan komunitas</li>
+    </ul>
+
+    <h3>Contoh Penggunaan:</h3>
+    <ul>
+      <li>Sistem antar lembaga pendidikan</li>
+      <li>Kerja sama antar instansi pemerintahan</li>
+      <li>Cloud antar rumah sakit</li>
+    </ul>
+
+    <div class="highlight">
+      Community Cloud menjadi solusi tengah antara Public dan Private Cloud.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>5. Hybrid Cloud</h2>
+    <p>
+      Hybrid Cloud adalah kombinasi dari dua atau lebih model deployment cloud,
+      biasanya Public Cloud dan Private Cloud, yang saling terintegrasi.
+    </p>
+
+    <h3>Karakteristik Hybrid Cloud:</h3>
+    <ul>
+      <li>Fleksibilitas tinggi</li>
+      <li>Dapat memisahkan data sensitif dan non-sensitif</li>
+      <li>Efisiensi biaya dan keamanan seimbang</li>
+    </ul>
+
+    <h3>Contoh Penggunaan:</h3>
+    <ul>
+      <li>Aplikasi e-commerce</li>
+      <li>Sistem perusahaan besar</li>
+      <li>Manajemen data skala besar</li>
+    </ul>
+
+    <div class="highlight">
+      Hybrid Cloud adalah model deployment yang paling banyak digunakan saat ini.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>6. Perbandingan Model Deployment Cloud</h2>
+    <ul>
+      <li><strong>Public Cloud:</strong> Murah, fleksibel, keamanan standar</li>
+      <li><strong>Private Cloud:</strong> Aman, mahal, kontrol penuh</li>
+      <li><strong>Community Cloud:</strong> Kolaboratif, biaya bersama</li>
+      <li><strong>Hybrid Cloud:</strong> Fleksibel, paling kompleks</li>
+    </ul>
+
+    <div class="highlight">
+      Pemilihan model deployment harus disesuaikan dengan kebutuhan organisasi,
+      anggaran, dan tingkat keamanan data.
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <div class="nav-actions">
+    <a href="bab2.html" class="btn btn-back">← Bab 2</a>
+    <a href="bab4.html" class="btn btn-next">Bab 4 →</a>
+  </div>
+
+</div>
+
+<footer>
+  © <span id="year"></span> Materi Cloud Computing
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
