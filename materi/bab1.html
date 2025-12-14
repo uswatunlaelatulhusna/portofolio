@@ -2,23 +2,220 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Bab 1 - Cloud Computing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bab 1 – Pengantar Cloud Computing</title>
+
+  <style>
+    :root{
+      --soft-blue:#EAF6FF;
+      --primary:#0E4C92;
+      --text:#2c2c2c;
+      --muted:#6b7280;
+      --card:#ffffff;
+      --radius:14px;
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:linear-gradient(180deg,var(--soft-blue),#fff);
+      color:var(--text);
+      line-height:1.7;
+    }
+
+    /* Header */
+    .header{
+      max-width:900px;
+      margin:0 auto;
+      padding:32px 20px 10px;
+    }
+
+    .breadcrumb{
+      font-size:14px;
+      color:var(--muted);
+    }
+
+    .breadcrumb a{
+      color:var(--primary);
+      text-decoration:none;
+    }
+
+    h1{
+      margin:10px 0 6px;
+      color:var(--primary);
+      font-size:28px;
+    }
+
+    .subtitle{
+      color:var(--muted);
+      font-size:16px;
+    }
+
+    /* Content */
+    .container{
+      max-width:900px;
+      margin:20px auto 60px;
+      padding:0 20px;
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:22px;
+      box-shadow:0 12px 30px rgba(14,76,146,0.08);
+      margin-bottom:18px;
+    }
+
+    h2{
+      font-size:20px;
+      margin-top:0;
+      color:var(--primary);
+    }
+
+    ul{
+      padding-left:18px;
+    }
+
+    li{
+      margin-bottom:6px;
+    }
+
+    .highlight{
+      background:rgba(14,76,146,0.06);
+      border-left:4px solid var(--primary);
+      padding:14px;
+      border-radius:10px;
+      font-size:15px;
+    }
+
+    /* Navigation */
+    .nav-actions{
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      margin-top:24px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:10px 16px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:600;
+      font-size:14px;
+      transition:0.2s ease;
+    }
+
+    .btn-back{
+      background:#fff;
+      color:var(--primary);
+      border:2px solid rgba(14,76,146,0.2);
+    }
+
+    .btn-next{
+      background:var(--primary);
+      color:#fff;
+    }
+
+    .btn:hover{
+      transform:translateY(-2px);
+      box-shadow:0 8px 20px rgba(14,76,146,0.15);
+    }
+
+    footer{
+      text-align:center;
+      font-size:13px;
+      color:var(--muted);
+      padding:30px 20px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Bab 1: Pengantar Cloud Computing</h1>
-  <p>
-    Cloud Computing adalah teknologi yang memungkinkan pengguna mengakses
-    sumber daya komputasi seperti server, storage, dan aplikasi melalui internet.
-  </p>
 
-  <h3>Materi Pokok:</h3>
-  <ul>
-    <li>Pengertian Cloud Computing</li>
-    <li>Sejarah Cloud Computing</li>
-    <li>Karakteristik Cloud Computing</li>
-    <li>Kelebihan dan Kekurangan</li>
-  </ul>
+  <!-- HEADER -->
+  <div class="header">
+    <div class="breadcrumb">
+      <a href="../index.html">Beranda</a> / Materi / Bab 1
+    </div>
+    <h1>Bab 1: Pengantar Cloud Computing</h1>
+    <p class="subtitle">
+      Memahami konsep dasar cloud computing sebagai fondasi pembelajaran.
+    </p>
+  </div>
 
-  <a href="index.html">← Kembali ke Menu</a>
+  <!-- CONTENT -->
+  <div class="container">
+
+    <div class="card">
+      <h2>1. Pengertian Cloud Computing</h2>
+      <p>
+        Cloud Computing adalah teknologi yang memungkinkan pengguna untuk
+        mengakses dan menggunakan sumber daya komputasi seperti server,
+        penyimpanan data (storage), database, jaringan, dan aplikasi
+        melalui internet tanpa harus memiliki atau mengelola perangkat keras secara langsung.
+      </p>
+
+      <div class="highlight">
+        Contoh sederhana cloud computing adalah Google Drive, Gmail,
+        dan Google Docs yang dapat diakses kapan saja melalui internet.
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>2. Sejarah Singkat Cloud Computing</h2>
+      <p>
+        Konsep cloud computing berkembang dari teknologi komputasi terdistribusi
+        dan virtualisasi. Seiring meningkatnya kebutuhan akan efisiensi dan skalabilitas,
+        layanan cloud mulai digunakan secara luas oleh perusahaan dan individu.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>3. Karakteristik Cloud Computing</h2>
+      <ul>
+        <li><strong>On-demand self-service</strong> – pengguna dapat mengatur layanan sendiri</li>
+        <li><strong>Broad network access</strong> – dapat diakses melalui berbagai perangkat</li>
+        <li><strong>Resource pooling</strong> – sumber daya digunakan bersama</li>
+        <li><strong>Rapid elasticity</strong> – kapasitas dapat ditambah atau dikurangi</li>
+        <li><strong>Measured service</strong> – pembayaran sesuai penggunaan</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>4. Kelebihan dan Kekurangan Cloud Computing</h2>
+
+      <h3>Kelebihan</h3>
+      <ul>
+        <li>Tidak memerlukan investasi hardware besar</li>
+        <li>Akses fleksibel dari mana saja</li>
+        <li>Skalabilitas tinggi</li>
+      </ul>
+
+      <h3>Kekurangan</h3>
+      <ul>
+        <li>Ketergantungan pada koneksi internet</li>
+        <li>Isu keamanan dan privasi data</li>
+        <li>Kontrol sistem terbatas</li>
+      </ul>
+    </div>
+
+    <!-- NAVIGATION -->
+    <div class="nav-actions">
+      <a href="../index.html#materi" class="btn btn-back">← Kembali ke Materi</a>
+      <a href="bab2.html" class="btn btn-next">Bab 2 →</a>
+    </div>
+
+  </div>
+
+  <footer>
+    © <span id="year"></span> Materi Cloud Computing
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
 </body>
 </html>
