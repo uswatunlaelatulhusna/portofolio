@@ -1,22 +1,29 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const y = new Date().getFullYear();
-  const yearEl = document.getElementById('year');
-  if (yearEl) yearEl.textContent = y;
-
-  const boxes = Array.from(document.querySelectorAll('.material-box'));
+  const boxes = document.querySelectorAll('.material-box');
 
   boxes.forEach(box => {
+    const titleBtn = box.querySelector('.material-title');
+    const content = box.querySelector('.material-content');
+
+    // pastikan awalnya tertutup
     box.setAttribute('aria-expanded', 'false');
 
-    // ❌ HAPUS toggle di klik
-    // klik biarkan browser handle href
+    // klik JUDUL → toggle ringkasan
+    titleBtn.addEventListener('click', function (e) {
+      e.preventDefault();      // tahan link
+      e.stopPropagation();     // jangan naik ke <a>
 
-    // keyboard aksesibilitas
-    box.addEventListener('keydown', function (e) {
-      if (e.key === 'Enter') {
-        // biarkan Enter pindah halaman
-        window.location.href = box.getAttribute('href');
+      const isOpen = box.getAttribute('aria-expanded') === 'true';
+
+      // tutup semua dulu
+      boxes.forEach(b => b.setAttribute('aria-expanded', 'false'));
+
+      // buka jika sebelumnya tertutup
+      if (!isOpen) {
+        box.setAttribute('aria-expanded', 'true');
       }
     });
+
+    // klik GAMBAR → biarkan <a> pindah halaman (TIDAK DIHALANGI)
   });
 });
