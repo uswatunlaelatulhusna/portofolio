@@ -101,6 +101,11 @@ body{
 .material-box[aria-expanded="true"] .material-content{
   max-height:240px;opacity:1;transform:translateY(0);padding-top:6px;padding-bottom:6px
 }
+.material-title{display:block;width:100%;background:none;border:none;padding:0;margin:0 0 8px 0;font-size:1rem;font-weight:600;text-align:left;color:inherit;cursor:pointer;
+}
+
+.material-title:focus-visible{outline:2px solid rgba(14,76,146,.4); border-radius:6px;
+}
 
 /* Contact */
 .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
