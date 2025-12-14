@@ -12,15 +12,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // klik mouse
     box.addEventListener('click', function (e) {
-      // biarkan href bekerja untuk navigasi internal, tapi kita toggling state
-      e.preventDefault();
       toggleBox(box);
     });
 
     // keyboard (Enter / Space)
     box.addEventListener('keydown', function (e) {
       if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
         toggleBox(box);
       }
     });
