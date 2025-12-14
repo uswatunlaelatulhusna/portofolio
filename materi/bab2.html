@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bab 2 – Model Layanan Cloud Computing</title>
+
+  <style>
+    :root{
+      --soft-blue:#EAF6FF;
+      --primary:#0E4C92;
+      --text:#2c2c2c;
+      --muted:#6b7280;
+      --card:#ffffff;
+      --radius:14px;
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:linear-gradient(180deg,var(--soft-blue),#fff);
+      color:var(--text);
+      line-height:1.7;
+    }
+
+    .header{
+      max-width:900px;
+      margin:0 auto;
+      padding:32px 20px 10px;
+    }
+
+    .breadcrumb{
+      font-size:14px;
+      color:var(--muted);
+    }
+
+    .breadcrumb a{
+      color:var(--primary);
+      text-decoration:none;
+    }
+
+    h1{
+      margin:10px 0 6px;
+      color:var(--primary);
+      font-size:28px;
+    }
+
+    .subtitle{
+      color:var(--muted);
+      font-size:16px;
+    }
+
+    .container{
+      max-width:900px;
+      margin:20px auto 60px;
+      padding:0 20px;
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:22px;
+      box-shadow:0 12px 30px rgba(14,76,146,0.08);
+      margin-bottom:18px;
+    }
+
+    h2{
+      font-size:20px;
+      margin-top:0;
+      color:var(--primary);
+    }
+
+    h3{
+      margin-bottom:6px;
+    }
+
+    ul{
+      padding-left:18px;
+    }
+
+    li{
+      margin-bottom:6px;
+    }
+
+    .highlight{
+      background:rgba(14,76,146,0.06);
+      border-left:4px solid var(--primary);
+      padding:14px;
+      border-radius:10px;
+      font-size:15px;
+      margin-top:10px;
+    }
+
+    .nav-actions{
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      margin-top:24px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:10px 16px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:600;
+      font-size:14px;
+      transition:0.2s ease;
+    }
+
+    .btn-back{
+      background:#fff;
+      color:var(--primary);
+      border:2px solid rgba(14,76,146,0.2);
+    }
+
+    .btn-next{
+      background:var(--primary);
+      color:#fff;
+    }
+
+    .btn:hover{
+      transform:translateY(-2px);
+      box-shadow:0 8px 20px rgba(14,76,146,0.15);
+    }
+
+    footer{
+      text-align:center;
+      font-size:13px;
+      color:var(--muted);
+      padding:30px 20px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="breadcrumb">
+    <a href="../index.html">Beranda</a> / Materi / Bab 2
+  </div>
+  <h1>Bab 2: Model Layanan Cloud Computing</h1>
+  <p class="subtitle">
+    Memahami jenis layanan cloud berdasarkan tingkat kontrol dan tanggung jawab pengguna.
+  </p>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+
+  <div class="card">
+    <h2>1. Pengantar Model Layanan Cloud</h2>
+    <p>
+      Model layanan cloud computing menjelaskan bagaimana sumber daya komputasi
+      disediakan kepada pengguna. Setiap model layanan memiliki tingkat kontrol,
+      tanggung jawab, dan kemudahan penggunaan yang berbeda.
+    </p>
+
+    <div class="highlight">
+      Semakin ke arah <strong>SaaS</strong>, pengguna semakin mudah menggunakan layanan,
+      namun kontrol sistem semakin kecil.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>2. Infrastructure as a Service (IaaS)</h2>
+    <p>
+      Infrastructure as a Service (IaaS) adalah model layanan cloud yang menyediakan
+      infrastruktur dasar seperti server virtual, penyimpanan (storage), dan jaringan.
+      Pada model ini, penyedia cloud hanya menyediakan infrastruktur, sedangkan pengguna
+      bertanggung jawab atas sistem operasi dan aplikasi.
+    </p>
+
+    <h3>Karakteristik IaaS:</h3>
+    <ul>
+      <li>Kontrol penuh terhadap sistem operasi</li>
+      <li>Dapat mengatur konfigurasi server sendiri</li>
+      <li>Skalabilitas tinggi</li>
+    </ul>
+
+    <h3>Contoh Penggunaan:</h3>
+    <ul>
+      <li>Hosting website skala besar</li>
+      <li>Server aplikasi</li>
+      <li>Lingkungan pengujian (testing environment)</li>
+    </ul>
+
+    <div class="highlight">
+      Contoh layanan IaaS: Amazon EC2, Google Compute Engine, Microsoft Azure Virtual Machine
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>3. Platform as a Service (PaaS)</h2>
+    <p>
+      Platform as a Service (PaaS) menyediakan platform lengkap untuk pengembangan aplikasi,
+      termasuk sistem operasi, database, dan framework. Pengguna hanya fokus pada
+      pengembangan aplikasi tanpa perlu mengelola server.
+    </p>
+
+    <h3>Karakteristik PaaS:</h3>
+    <ul>
+      <li>Tidak perlu mengelola server</li>
+      <li>Mendukung kolaborasi tim developer</li>
+      <li>Mempercepat proses deployment aplikasi</li>
+    </ul>
+
+    <h3>Contoh Penggunaan:</h3>
+    <ul>
+      <li>Pengembangan aplikasi web</li>
+      <li>API dan backend aplikasi</li>
+      <li>Prototype aplikasi</li>
+    </ul>
+
+    <div class="highlight">
+      Contoh layanan PaaS: Google App Engine, Heroku, AWS Elastic Beanstalk
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>4. Software as a Service (SaaS)</h2>
+    <p>
+      Software as a Service (SaaS) adalah model layanan cloud di mana pengguna
+      langsung menggunakan aplikasi yang sudah jadi melalui internet.
+      Semua pengelolaan sistem dilakukan oleh penyedia layanan.
+    </p>
+
+    <h3>Karakteristik SaaS:</h3>
+    <ul>
+      <li>Tidak memerlukan instalasi</li>
+      <li>Dapat diakses melalui browser</li>
+      <li>Pembaruan dilakukan otomatis</li>
+    </ul>
+
+    <h3>Contoh Penggunaan:</h3>
+    <ul>
+      <li>Email dan dokumen online</li>
+      <li>Aplikasi meeting online</li>
+      <li>Sistem manajemen pembelajaran</li>
+    </ul>
+
+    <div class="highlight">
+      Contoh layanan SaaS: Gmail, Google Docs, Zoom, Microsoft 365
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>5. Perbandingan Model Layanan Cloud</h2>
+    <ul>
+      <li><strong>IaaS:</strong> Kontrol paling besar, tanggung jawab paling tinggi</li>
+      <li><strong>PaaS:</strong> Seimbang antara kontrol dan kemudahan</li>
+      <li><strong>SaaS:</strong> Paling mudah digunakan, kontrol paling kecil</li>
+    </ul>
+
+    <div class="highlight">
+      Pemilihan model layanan cloud harus disesuaikan dengan kebutuhan,
+      kemampuan teknis, dan tujuan penggunaan.
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <div class="nav-actions">
+    <a href="bab1.html" class="btn btn-back">← Bab 1</a>
+    <a href="bab3.html" class="btn btn-next">Bab 3 →</a>
+  </div>
+
+</div>
+
+<footer>
+  © <span id="year"></span> Materi Cloud Computing
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
