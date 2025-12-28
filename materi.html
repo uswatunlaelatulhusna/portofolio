@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Materi Pembelajaran</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <h1 class="brand-name">Materi Pembelajaran</h1>
+    <nav class="main-nav">
+      <a href="index.html">← Kembali ke Beranda</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="container section">
+    <h3 class="section-title">Materi Pembelajaran</h3>
+    <p class="section-desc">
+      Kumpulan materi pembelajaran yang disusun secara bertahap dan mudah dipahami.
+    </p>
+
+    <div class="materials-grid">
+
+      <a href="materi/bab1.html" class="material-box">
+        <img src="img/bab1.jpg" alt="Materi 1" />
+        <h4>Bab 1: Pengantar Cloud Computing</h4>
+        <p>Pengertian, sejarah, dan karakteristik cloud computing.</p>
+      </a>
+
+      <a href="materi/bab2.html" class="material-box">
+        <img src="img/bab2.jpg" alt="Materi 2" />
+        <h4>Bab 2: Model Layanan Cloud</h4>
+        <p>IaaS, PaaS, dan SaaS.</p>
+      </a>
+
+      <a href="materi/bab3.html" class="material-box">
+        <img src="img/bab3.jpg" alt="Materi 3" />
+        <h4>Bab 3: Model Deployment Cloud</h4>
+        <p>Public, Private, Hybrid, dan Community Cloud.</p>
+      </a>
+
+      <!-- Tambahkan bab lainnya dengan pola yang sama -->
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© <span id="year"></span> Uswatun Laelatul Husna</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
